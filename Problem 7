@@ -1,0 +1,5 @@
+SELECT product_id, sale_date, SUM(quantity_sold) AS total_quantity_sold
+FROM sales
+GROUP BY product_id, sale_date
+ORDER BY total_quantity_sold DESC
+LIMIT 1;
