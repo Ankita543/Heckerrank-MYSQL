@@ -1,0 +1,4 @@
+SELECT c.customer_id, c.customer_name, MAX(o.order_amount) AS max_order_amount
+FROM customer c
+JOIN orders o ON c.customer_id = o.customer_id
+GROUP BY c.customer_id, c.customer_name;
