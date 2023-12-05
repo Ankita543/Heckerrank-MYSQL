@@ -1,0 +1,11 @@
+-- Display information about the customers
+SELECT *
+FROM customers
+LIMIT 10;
+
+-- Explore order statistics
+SELECT
+  COUNT(DISTINCT order_id) AS total_orders,
+  MIN(order_date) AS earliest_order,
+  MAX(order_date) AS latest_order,
+  AVG(order_total) AS average_o
